@@ -88,7 +88,7 @@ export const PVFlatList = (props: Props) => {
     renderItem,
     renderSectionHeader,
     sections,
-    showNoInternetConnectionMessage,
+    // showNoInternetConnectionMessage,
     stickySectionHeadersEnabled,
     testID,
     transparent
@@ -110,6 +110,8 @@ export const PVFlatList = (props: Props) => {
   // TODO: NetInfo is apparently not accurately detecting internet connection on all devices,
   // so we're disabling showNoInternetConnectionMessage for now.
   // const shouldShowResults = (!noResultsFound && !showNoInternetConnectionMessage) || useSectionList
+  // const shouldShowNoResultsFoundMessage =
+  //   !disableNoResultsMessage && !isLoadingMore && !showNoInternetConnectionMessage && noResultsFound
   const shouldShowResults = !noResultsFound || useSectionList
   const shouldShowNoResultsFoundMessage =
     !disableNoResultsMessage && !isLoadingMore && noResultsFound
