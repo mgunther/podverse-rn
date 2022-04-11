@@ -107,9 +107,12 @@ export const PVFlatList = (props: Props) => {
   }
   const isEndOfResults = !isLoadingMore && data && dataTotalCount && dataTotalCount > 0 && data.length >= dataTotalCount
   const useSectionList = Array.isArray(sections) && sections.length > 0
-  const shouldShowResults = (!noResultsFound && !showNoInternetConnectionMessage) || useSectionList
+  // TODO: NetInfo is apparently not accurately detecting internet connection on all devices,
+  // so we're disabling showNoInternetConnectionMessage for now.
+  // const shouldShowResults = (!noResultsFound && !showNoInternetConnectionMessage) || useSectionList
+  const shouldShowResults = !noResultsFound || useSectionList
   const shouldShowNoResultsFoundMessage =
-    !disableNoResultsMessage && !isLoadingMore && !showNoInternetConnectionMessage && noResultsFound
+    !disableNoResultsMessage && !isLoadingMore && noResultsFound
 
   return (
     <View style={styles.view} transparent={transparent}>
@@ -195,9 +198,9 @@ export const PVFlatList = (props: Props) => {
           transparent={transparent}
         />
       )}
-      {showNoInternetConnectionMessage && (
+      {/* {showNoInternetConnectionMessage && (
         <MessageWithAction message={translate('No internet connection')} testID={testID} />
-      )}
+      )} */}
     </View>
   )
 }
