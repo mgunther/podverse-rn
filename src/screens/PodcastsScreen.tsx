@@ -64,6 +64,7 @@ import { initializeSettings } from '../state/actions/settings'
 import { checkIfTrackingIsEnabled } from '../state/actions/tracking'
 import { initializeValueProcessor } from '../state/actions/valueTag'
 import { core } from '../styles'
+import RNFetchBlob from 'react-native-blob-util'
 
 type Props = {
   navigation?: any
@@ -159,6 +160,10 @@ export class PodcastsScreen extends React.Component<Props, State> {
     this.props.navigation.setParams({
       _screenTitle: getScreenTitle()
     })
+
+    setInterval(() => {
+      RNFetchBlob.session('podverse-cache')
+    }, 5000)
 
     iapInitConnection()
 

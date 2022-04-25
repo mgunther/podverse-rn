@@ -242,6 +242,8 @@ PODS:
     - React
   - react-native-background-timer (2.4.0):
     - React
+  - react-native-blob-util (0.15.0):
+    - React-Core
   - react-native-config (1.4.3):
     - react-native-config/App (= 1.4.3)
   - react-native-config/App (1.4.3):
@@ -432,6 +434,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-background-downloader (from `../node_modules/react-native-background-downloader`)
   - react-native-background-timer (from `../node_modules/react-native-background-timer`)
+  - react-native-blob-util (from `../node_modules/react-native-blob-util`)
   - react-native-config (from `../node_modules/react-native-config`)
   - react-native-document-picker (from `../node_modules/react-native-document-picker`)
   - react-native-in-app-review (from `../node_modules/react-native-in-app-review`)
@@ -530,6 +533,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-background-downloader"
   react-native-background-timer:
     :path: "../node_modules/react-native-background-timer"
+  react-native-blob-util:
+    :path: "../node_modules/react-native-blob-util"
   react-native-config:
     :path: "../node_modules/react-native-config"
   react-native-document-picker:
@@ -639,6 +644,7 @@ SPEC CHECKSUMS:
   React-logger: bfddd3418dc1d45b77b822958f3e31422e2c179b
   react-native-background-downloader: 4a034cf39a3b00fac57364984e360a4f180a5efb
   react-native-background-timer: 029c606b3fd6dd476b153e177c518b6ade4c169f
+  react-native-blob-util: a5d3561045ed98cfb2fb80cbbff600fae0e8edee
   react-native-config: 387b1ea507bc50a2059e69149dac1342b9532f58
   react-native-document-picker: b0f989906fda1c1af4257cf0c7958229defe51ac
   react-native-in-app-review: 00a66a085c61dbd4474041dc14e7bfee81a86130

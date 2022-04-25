@@ -2100,7 +2100,7 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
-base-64@^0.1.0:
+base-64@0.1.0, base-64@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/base-64/-/base-64-0.1.0.tgz#780a99c84e7d600260361511c4877613bf24f6bb"
   integrity sha1-eAqZyE59YAJgNhURxId2E78k9rs=
@@ -7668,10 +7668,10 @@ plist@^3.0.2, plist@^3.0.5:
     base64-js "^1.5.1"
     xmlbuilder "^9.0.7"
 
-podverse-shared@^4.3.4:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/podverse-shared/-/podverse-shared-4.3.4.tgz#b309a4a6bf53c4e80ac27ea83b8e29d130387c5a"
-  integrity sha512-08YPN3TjqsnCLxStZcl+4uC+re2QCF6bDBW5oP3ZKYzhkWVYcHKRVKGh23TomtXsV6SBVsrrDlKSk2WVpUSFgg==
+podverse-shared@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/podverse-shared/-/podverse-shared-4.4.0.tgz#341f0d06c6129f3a01832e2db3548ba030bc8b06"
+  integrity sha512-Bj1m3jZPDoZKPDdquIyS/ZFsNNYaaB0cSgVDd3eN1HOPhWdsu1BW+T0V0iQTC5I3mVp4o/KEUdZHz7qGFZSZoQ==
   dependencies:
     html-entities "^2.3.2"
     striptags "^3.2.0"
@@ -7927,6 +7927,14 @@ react-native-background-timer@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/react-native-background-timer/-/react-native-background-timer-2.4.0.tgz#b659fdc8ce8ddbed04fbb296e2ec9f4ad8e1659f"
   integrity sha512-00DphusbzXUuJDP+SSRe7FJczFWzrCErr+2TdRxYfbQjpDaRk3rXw8nhlQXI5U6KthquEQOrCRMq2F2hi/HKLg==
+
+react-native-blob-util@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/react-native-blob-util/-/react-native-blob-util-0.15.0.tgz#b75755e0169d7e3aed865a835c38fe584d2aa56a"
+  integrity sha512-hXUoh1eHe25sREQkblpXGQKe1rr8uE1QgEVQIBeF4MbCfscPOCB6YYlsQ9PvJp0dXHCE/H1g//WvkM7wQukJeQ==
+  dependencies:
+    base-64 "0.1.0"
+    glob "^7.1.6"
 
 react-native-cheerio@1.0.0-rc.4:
   version "1.0.0-rc.4"

@@ -15,6 +15,7 @@ import { getPodcastFeedUrlAuthority } from './podcast'
 import { addQueueItemNext, filterItemFromQueueItems, getQueueItems, getQueueItemsLocally } from './queue'
 import { addOrUpdateHistoryItem, getHistoryItemsIndexLocally } from './userHistoryItem'
 import { getNowPlayingItemFromLocalStorage, getNowPlayingItemLocally } from './userNowPlayingItem'
+import { getPlayerCachedFilePath } from './playerCache'
 
 declare module 'react-native-track-player' {
   export function getCurrentLoadedTrack(): Promise<string>
@@ -282,10 +283,12 @@ export const audioCreateTrack = async (item: NowPlayingItem) => {
       }
     } else {
       const Authorization = await getPodcastCredentialsHeader(finalFeedUrl)
-
+      console.log('before', episodeMediaUrl)
+      const cachedFilePath = await getPlayerCachedFilePath(episodeMediaUrl, Authorization)
+console.log('cachedFilePath', cachedFilePath)
       track = {
         id,
-        url: episodeMediaUrl,
+        url: cachedFilePath,
         title: episodeTitle,
         artist: podcastTitle,
         ...(imageUrl ? { artwork: imageUrl } : {}),
